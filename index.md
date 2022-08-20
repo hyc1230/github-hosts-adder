@@ -33,5 +33,4 @@
 [直链](https://raw.githubusercontent.com/hyc1230/github-host-adder/main/github-hosts-adder.cpp)
 
 ---
-
 最近更新：2022/08/20 13:58
