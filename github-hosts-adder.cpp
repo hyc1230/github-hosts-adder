@@ -1,16 +1,3 @@
-# github-hosts-adder
-
-解决中国大陆无法访问GitHub的问题。
-
-## 用法
-
-下载程序并运行即可。
-
-## 代码
-
-如果您想在线查看代码，却发现了一堆乱码，这是编码问题造成的，作为替代措施，您可以在这里查看代码。
-
-```cpp
 #include <iostream>
 #include <cstring>
 #include <fstream>
@@ -45,19 +32,19 @@ int main(int argc, char* argv[])
 	}
 	char Path[1024];
 	SHGetSpecialFolderPath(0, Path, CSIDL_WINDOWS, 0);
-	cout << "Windows文件夹: " << Path << endl;
+	cout << "Windows�ļ���: " << Path << endl;
 	strcat(Path, "\\System32\\drivers\\etc\\hosts");
-	cout << "Hosts文件路径: " << Path << endl;
-	cout << "  打开Hosts..." << endl;
+	cout << "Hosts�ļ�·��: " << Path << endl;
+	cout << "  ��Hosts..." << endl;
 	ofstream fout(Path, ios::app);
-	cout << "  已打开Hosts" << endl;
-	cout << "  写入GitHub服务器信息..." << endl;
+	cout << "  �Ѵ�Hosts" << endl;
+	cout << "  д��GitHub��������Ϣ..." << endl;
 	fout << "\n\n# GitHub Start\n\n140.82.112.4       github.com\n140.82.114.20      gist.github.com\n185.199.110.154    github.githubassets.com\n199.232.69.194     github.global.ssl.fastly.net\n151.101.184.133    assets-cdn.github.com\n151.101.184.133    raw.githubusercontent.com\n151.101.184.133    gist.githubusercontent.com\n151.101.184.133    cloud.githubusercontent.com\n151.101.184.133    camo.githubusercontent.com\n199.232.96.133     avatars.githubusercontent.com\n\n# GitHub End\n";
-	cout << "  关闭Hosts..." << endl;
+	cout << "  �ر�Hosts..." << endl;
 	fout.close();
-	cout << "已完成" << endl;
-	cout << "请按任意键退出...";
+	cout << "�����" << endl;
+	cout << "�밴������˳�...";
 	_getch();
 	return 0;
 }
-```
+
